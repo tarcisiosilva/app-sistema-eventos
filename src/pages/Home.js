@@ -5,6 +5,7 @@ import CalendarView from '../components/CalendarView';
 
 import './Home.css'; // Arquivo CSS personalizado
 import axios from 'axios';
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const Home = () => {
     const [events, setEvents] = useState([]);
@@ -17,7 +18,7 @@ const Home = () => {
 
     const fetchEvents = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/public');
+            const response = await axios.get({apiUrl});
             setEvents(response.data);
         } catch (error) {
             console.error('Erro ao buscar eventos:', error);

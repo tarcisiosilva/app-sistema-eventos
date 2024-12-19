@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const EventList = () => {
   const [eventos, setEventos] = useState([]);
   const [erro, setErro] = useState(null);
 
   useEffect(() => {
     // Fazendo a chamada à API
-    axios.get('http://localhost:8000/public')
+    axios.get({apiUrl})
       .then((resposta) => {
         // Verificando se a resposta é um array e contém dados
         if (Array.isArray(resposta.data)) {

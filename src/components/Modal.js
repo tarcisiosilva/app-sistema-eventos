@@ -6,13 +6,16 @@ import EditModal from '../components/EditModal';
 import './Modal.css'; // Arquivo CSS para o estilo do modal
 import './EditModal.css'; 
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
+
 const refreshEvents = () => { 
     window.location.reload(); 
 }
 
 const deleteEvent = async (id) => {
     try {
-        const response = await axios.delete('http://localhost:8000/public', {
+        const response = await axios.delete({apiUrl}, {
             data: { id }, // Envia o ID no corpo da requisição
         });
 

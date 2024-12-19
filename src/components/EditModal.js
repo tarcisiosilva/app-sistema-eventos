@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './EditModal.css'; 
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const refreshEvents = () => { 
     window.location.reload(); 
 }
@@ -35,7 +37,7 @@ const EditModal = ({ isOpen, onClose, event }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:8000/public/`, formData)
+            await axios.put({apiUrl}, formData)
             .then((response) => {
                 console.log('Evento Atualizado:', response.data);
                 refreshEvents();
