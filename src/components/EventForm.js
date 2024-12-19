@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './EventForm.css'; // Arquivo CSS personalizado
 
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const refreshEvents = () => { 
     window.location.reload(); 
@@ -26,7 +27,7 @@ const refreshEvents = () => {
         const handleSubmit = (e) => {
             e.preventDefault();
             console.log(formData);
-            axios.post('http://localhost:8000/public', formData)
+            axios.post({apiUrl}, formData)
                 .then((response) => {
                     console.log('Evento criado:', response.data);
                     refreshEvents();

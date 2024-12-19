@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Application - Sistema de Gerenciamento de Eventos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um sistema de gerenciamento de eventos construído com **React.js**, oferecendo funcionalidades como visualização, edição e exclusão de eventos em um calendário interativo.
 
-## Available Scripts
+## Estrutura do Projeto
+app-sistema-eventos/ 
+├── node_modules/ 
+├── public/ 
+├── src/ 
+│ ├── components/  
+│ ├── CalendarView.css 
+│ ├── CalendarView.js  
+│ ├── EditModal.css  
+│ ├── EditModal.js  
+│ ├── EventForm.css 
+│ ├── EventForm.js 
+│ ├── EventList.js  
+│ ├── Modal.css  
+│ ├── Modal.js 
+│ ├── pages/ 
+│ │   ├── Home.js 
+│ │   ├── Home.css 
+├── App.css 
+├── App.js  
+├── App.test.js 
+├── index.css 
+├── index.js 
+├── logo.svg  
+├── .env 
+├── .gitignore
 
-In the project directory, you can run:
+### Descrição dos Arquivos Principais
 
-### `npm start`
+- **components/**
+  - `CalendarView.js` e `CalendarView.css`: Componente principal para exibição do calendário.
+  - `EditModal.js` e `EditModal.css`: Modal para edição de eventos, com foco em UX/UI.
+  - `EventForm.js` e `EventForm.css`: Formulário para criação de novos eventos.
+  - `EventList.js`: Lista de eventos do dia.
+  - `Modal.js` e `Modal.css`: Modal para exibir eventos e ações (editar/excluir).
+  
+- **pages/**: Diretório reservado para páginas completas da aplicação.
+- **App.js**: Arquivo principal que orquestra os componentes e define a lógica geral.
+- **index.js**: Ponto de entrada da aplicação.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instalação e Configuração
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone o repositório:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/tarcisiosilva/app-sistema-eventos.git
+   cd app-sistema-eventos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Instale as dependências:
+  npm install
 
-### `npm run build`
+3. Criar .env
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    REACT_APP_API_URL=http://localhost:8000/public
+    REACT_APP_APP_NAME=Gerenciador de Eventos
+    REACT_APP_ENV=development
+    REACT_APP_VERSION=1.0.0
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Inicie o servidor local:
+   npm start
+   
+5. Acesse a aplicação em: http://localhost:3000.

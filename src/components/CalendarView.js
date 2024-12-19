@@ -4,6 +4,8 @@ import Modal from './Modal'; // Importando o Modal
 import 'react-calendar/dist/Calendar.css';
 import './CalendarView.css'; // Arquivo CSS personalizado
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const CalendarView = () => {
     const [events, setEvents] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,7 +13,7 @@ const CalendarView = () => {
 
     useEffect(() => {
         // Chama o endpoint para obter eventos
-        fetch('http://localhost:8000/public')
+        fetch({apiUrl})
             .then((response) => response.json())
             .then((data) => setEvents(data))
             .catch((error) => console.error('Erro ao carregar eventos:', error));
