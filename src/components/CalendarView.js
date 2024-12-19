@@ -13,7 +13,7 @@ const CalendarView = () => {
 
     useEffect(() => {
         // Chama o endpoint para obter eventos
-        fetch({apiUrl})
+        fetch(apiUrl)
             .then((response) => response.json())
             .then((data) => setEvents(data))
             .catch((error) => console.error('Erro ao carregar eventos:', error));
