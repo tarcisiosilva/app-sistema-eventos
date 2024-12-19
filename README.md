@@ -3,7 +3,7 @@
 Este projeto é um sistema de gerenciamento de eventos construído com **React.js**, oferecendo funcionalidades como visualização, edição e exclusão de eventos em um calendário interativo.
 
 ## Estrutura do Projeto
-application/ 
+app-sistema-eventos/ 
 ├── node_modules/ 
 ├── public/ 
 ├── src/ 
@@ -20,14 +20,13 @@ application/
 │ ├── pages/ 
 │ │   ├── Home.js 
 │ │   ├── Home.css 
-├── App.css │ 
-├── App.js │ 
-├── App.test.js │ 
-├── index.css │ 
-├── index.js │
-├── logo.svg │ 
-├── reportWebVitals.js  
-├── setupTests.js 
+├── App.css 
+├── App.js  
+├── App.test.js 
+├── index.css 
+├── index.js 
+├── logo.svg  
+├── .env 
 ├── .gitignore
 
 ### Descrição dos Arquivos Principais
@@ -54,7 +53,14 @@ application/
 2. Instale as dependências:
   npm install
 
-3. Inicie o servidor local:
+3. Criar .env
+
+    REACT_APP_API_URL=http://localhost:8000/public
+    REACT_APP_APP_NAME=Gerenciador de Eventos
+    REACT_APP_ENV=development
+    REACT_APP_VERSION=1.0.0
+
+4. Inicie o servidor local:
    npm start
    
 5. Acesse a aplicação em: http://localhost:3000.
