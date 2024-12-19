@@ -18,7 +18,7 @@ const Home = () => {
 
     const fetchEvents = async () => {
         try {
-            const response = await axios.get({apiUrl});
+            const response = await axios.get(apiUrl);
             setEvents(response.data);
         } catch (error) {
             console.error('Erro ao buscar eventos:', error);

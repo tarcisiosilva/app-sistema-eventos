@@ -9,7 +9,7 @@ const EventList = () => {
 
   useEffect(() => {
     // Fazendo a chamada à API
-    axios.get({apiUrl})
+    axios.get(apiUrl)
       .then((resposta) => {
         // Verificando se a resposta é um array e contém dados
         if (Array.isArray(resposta.data)) {
