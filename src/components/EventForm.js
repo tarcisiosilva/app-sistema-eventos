@@ -27,7 +27,7 @@ const refreshEvents = () => {
         const handleSubmit = (e) => {
             e.preventDefault();
             console.log(formData);
-            axios.post({apiUrl}, formData)
+            axios.post(apiUrl, formData)
                 .then((response) => {
                     console.log('Evento criado:', response.data);
                     refreshEvents();
