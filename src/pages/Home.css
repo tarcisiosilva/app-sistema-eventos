@@ -1,0 +1,27 @@
+.create-event-btn {
+    background-color: #4CAF50; /* Verde elegante */
+    color: white; /* Texto branco */
+    font-size: 16px; /* Tamanho de texto legível */
+    padding: 10px 20px; /* Espaçamento confortável */
+    border: none; /* Sem bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Indicador de clicável */
+    transition: background-color 0.3s, transform 0.2s; /* Animações suaves */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para elevação */
+}
+
+.create-event-btn:hover {
+    background-color: #45a049; /* Cor mais escura no hover */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+.create-event-btn:active {
+    background-color: #3e8e41; /* Cor mais escura ao clicar */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Reduzir elevação */
+    transform: scale(0.95); /* Leve redução no clique */
+}
+
+.create-event-btn:focus {
+    outline: none; /* Remove bordas padrão de foco */
+    box-shadow: 0px 0px 5px rgba(72, 239, 128, 0.8); /* Brilho no foco */
+}
