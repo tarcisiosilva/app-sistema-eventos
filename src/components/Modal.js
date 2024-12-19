@@ -15,7 +15,7 @@ const refreshEvents = () => {
 
 const deleteEvent = async (id) => {
     try {
-        const response = await axios.delete({apiUrl}, {
+        const response = await axios.delete(apiUrl, {
             data: { id }, // Envia o ID no corpo da requisição
         });
 

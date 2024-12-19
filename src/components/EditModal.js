@@ -37,7 +37,7 @@ const EditModal = ({ isOpen, onClose, event }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put({apiUrl}, formData)
+            await axios.put(apiUrl, formData)
             .then((response) => {
                 console.log('Evento Atualizado:', response.data);
                 refreshEvents();
